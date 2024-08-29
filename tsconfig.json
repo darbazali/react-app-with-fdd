@@ -1,7 +1,38 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@core/*": ["./core/*"],
+      "@adapters/*": ["./adapters/*"],
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"]
+    }
+  },
+  "include": [
+    "./src",
+    ".eslintrc.json",
+    "vite.config.ts",
+    "lint-staged.config.ts",
+    "jest.config.ts",
+    "index.d.ts"
+  ],
+
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

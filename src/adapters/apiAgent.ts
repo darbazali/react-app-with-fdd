@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { API_BASE_URL } from "../constants/envVariables";
+import { API_BASE_URL } from "@constants/envVariables";
 const TOKEN = "token_from_state";
 
 export const apiAgent: AxiosInstance = axios.create({

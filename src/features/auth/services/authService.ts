@@ -18,6 +18,6 @@ export class AuthService implements IAuthService {
   }
 
   async logout(): Promise<void> {
-    await apiAgent.post("/logout", { data: {} });
+    await apiAgent.post("/logout");
   }
 }

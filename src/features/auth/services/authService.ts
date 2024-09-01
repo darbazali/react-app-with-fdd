@@ -6,7 +6,7 @@ interface IAuthService {
   readonly logout: () => Promise<void>
 }
 
-export class AuthService implements IAuthService {
+class AuthService implements IAuthService {
   async login(user: LoginParams): Promise<void> {
     await apiAgent.post<LoginParams, { data: LoginParams }>("/login", {
       data: user,
@@ -17,3 +17,5 @@ export class AuthService implements IAuthService {
     await apiAgent.post("/logout")
   }
 }
+
+export const authService = new AuthService()

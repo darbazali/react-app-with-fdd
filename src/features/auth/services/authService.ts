@@ -1,4 +1,4 @@
-import { apiAgent } from "@adapters/apiAgent"
+import apiAgent from "@adapters/apiAgent"
 import { LoginParams } from "../types"
 
 interface IAuthService {

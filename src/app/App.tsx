@@ -1,5 +1,7 @@
-const App = () => {
-  return <div>App</div>;
-};
+import Counter from "features/counter/components/Counter"
 
-export default App;
+const App = () => {
+  return <Counter />
+}
+
+export default App

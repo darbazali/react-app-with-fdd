@@ -1,9 +1,5 @@
 import { apiAgent } from "@adapters/apiAgent"
-
-interface LoginParams {
-  username: string
-  password: string
-}
+import { LoginParams } from "../types"
 
 interface IAuthService {
   readonly login: (user: LoginParams) => Promise<void>

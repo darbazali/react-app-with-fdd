@@ -15,4 +15,9 @@ describe("Counter Store", () => {
     useCounterStore.getState().increment()
     expect(useCounterStore.getState().count).toBe(1)
   })
+
+  it("should decrement count", () => {
+    useCounterStore.getState().decrement()
+    expect(useCounterStore.getState().count).toBe(-1)
+  })
 })

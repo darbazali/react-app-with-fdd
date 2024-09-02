@@ -1,16 +1,12 @@
 import apiAgent from "@adapters/apiAgent"
 import { LoginParams } from "../types"
+import AuthEntity from "@core/entities/auth"
+import { User } from "@core/entities/User"
 
-interface IAuthService {
-  readonly login: (user: LoginParams) => Promise<void>
-  readonly logout: () => Promise<void>
-}
-
-class AuthService implements IAuthService {
-  async login(user: LoginParams): Promise<void> {
-    await apiAgent.post<LoginParams, { data: LoginParams }>("/login", {
-      data: user,
-    })
+class AuthService implements AuthEntity {
+  async login(user: LoginParams): Promise<User> {
+    const { data } = await apiAgent.post<User>("/login", user)
+    return data
   }
 
   async logout(): Promise<void> {

@@ -1,5 +1,5 @@
 import { LoginParams } from "features/auth/types"
-import { User } from "./User"
+import { User } from "../models/User"
 
 interface AuthEntity {
   login: (user: LoginParams) => Promise<User>

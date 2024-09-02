@@ -10,4 +10,9 @@ describe("Counter Store", () => {
     const store = useCounterStore.getState()
     expect(store.count).toBe(0)
   })
+
+  it("should increment count", () => {
+    useCounterStore.getState().increment()
+    expect(useCounterStore.getState().count).toBe(1)
+  })
 })

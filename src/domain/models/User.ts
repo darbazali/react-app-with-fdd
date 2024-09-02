@@ -1,8 +1,15 @@
 export interface User {
   id: number
-  displayName: string
+  firstName: string
+  lastName: string
+  maidenName: string
+  age: number
+  gender: string
+  email: string
+  phone: string
   username: string
-  status: string
-  createAt: string
-  token: string
+  password: string
+  birthDate: string
+  image: string
+  role: "admin" | "user"
 }

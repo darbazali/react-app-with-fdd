@@ -1,11 +1,11 @@
 import apiAgent from "@adapters/apiAgent"
 import { LoginParams } from "../types"
-import AuthEntity from "domain/entities/auth"
-import { User } from "@domain/models/User"
+import AuthUserEntity from "@domain/entities/authEntity"
+import AuthUser from "@domain/models/AuthUser"
 
-class AuthService implements AuthEntity {
-  async login(user: LoginParams): Promise<User> {
-    const { data } = await apiAgent.post<User>("/login", user)
+class AuthService implements AuthUserEntity {
+  async login(user: LoginParams): Promise<AuthUser> {
+    const { data } = await apiAgent.post<AuthUser>("/login", user)
     return data
   }
 

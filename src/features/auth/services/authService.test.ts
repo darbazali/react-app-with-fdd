@@ -4,13 +4,11 @@ import { authService } from "./authService"
 import { LoginParams } from "../types"
 import AuthUser from "@domain/models/AuthUser"
 
-// Manual mock of apiAgent
 const mockPost = mock()
 
-// Replace the original post method with the mock
 beforeEach(() => {
   apiAgent.post = mockPost
-  mockPost.mockClear() // Clear mock data before each test
+  mockPost.mockClear()
 })
 
 describe("AuthService", () => {
@@ -27,7 +25,6 @@ describe("AuthService", () => {
       refreshToken: "",
     }
 
-    // Mock the API response
     mockPost.mockResolvedValueOnce({ data: mockUser })
 
     const loginParams: LoginParams = {
@@ -36,20 +33,16 @@ describe("AuthService", () => {
     }
     const result = await authService.login(loginParams)
 
-    // Check that the correct endpoint and data were used
     expect(mockPost).toHaveBeenCalledWith("/login", loginParams)
 
-    // Verify that the login method returns the correct user data
     expect(result).toEqual(mockUser)
   })
 
   it("should handle logout successfully", async () => {
-    // Mock the API response for logout
     mockPost.mockResolvedValueOnce({})
 
     await authService.logout()
 
-    // Check that the correct endpoint was called
     expect(mockPost).toHaveBeenCalledWith("/logout")
   })
 })

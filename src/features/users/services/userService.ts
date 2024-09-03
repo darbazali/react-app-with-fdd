@@ -1,6 +1,6 @@
 import apiAgent from "@adapters/apiAgent"
 import UserEntity from "@domain/entities/userEntity"
-import { User } from "@domain/models/User"
+import type { User } from "@domain/models/User"
 
 export class UserService implements Exact<UserService, UserEntity> {
   async getUsers(): Promise<User[]> {

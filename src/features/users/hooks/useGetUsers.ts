@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { userService } from "../services/userService"
-import { User } from "@domain/models/User"
+import { GetUsers } from "@domain/entities/userEntity"
 
 const useGetUsers = () => {
-  const [data, setData] = useState<User[]>([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<unknown>({})
+  const [data, setData] = useState<GetUsers>()
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<unknown>()
 
   useEffect(() => {
     ;(async () => {

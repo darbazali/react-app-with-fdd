@@ -1,8 +1,9 @@
 import { type RouteObject } from "react-router-dom"
+import Users from "./components/Users"
 
 const userRoutes: RouteObject = {
   path: "/users",
-  element: <h1>Users</h1>,
+  element: <Users />,
 }
 
 export default userRoutes

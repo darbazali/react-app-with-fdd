@@ -1,7 +1,8 @@
-import Counter from "features/counter/components/Counter"
+import { RouterProvider } from "react-router-dom"
+import { routes } from "./routes"
 
 const App = () => {
-  return <Counter />
+  return <RouterProvider router={routes} />
 }
 
 export default App

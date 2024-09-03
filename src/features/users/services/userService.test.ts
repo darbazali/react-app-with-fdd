@@ -1,7 +1,7 @@
 import { describe, expect, it, beforeEach, mock } from "bun:test"
 import apiAgent from "@adapters/apiAgent"
 import { userService } from "./userService"
-import type { User } from "@domain/models/User"
+import { GetUsers } from "@domain/entities/userEntity"
 
 const mockGet = mock()
 
@@ -12,23 +12,28 @@ beforeEach(() => {
 
 describe("UserService", () => {
   it("should get users successfully", async () => {
-    const mockUsers: User[] = [
-      {
-        id: 1,
-        firstName: "test",
-        lastName: "user",
-        email: "test@me.com",
-        username: "testuser",
-        maidenName: "",
-        age: 0,
-        gender: "",
-        phone: "",
-        password: "",
-        birthDate: "",
-        image: "",
-        role: "user",
-      },
-    ]
+    const mockUsers: GetUsers = {
+      limit: 0,
+      skip: 0,
+      total: 0,
+      users: [
+        {
+          id: 1,
+          firstName: "test",
+          lastName: "user",
+          email: "test@me.com",
+          username: "testuser",
+          maidenName: "",
+          age: 0,
+          gender: "",
+          phone: "",
+          password: "",
+          birthDate: "",
+          image: "",
+          role: "user",
+        },
+      ],
+    }
 
     mockGet.mockResolvedValueOnce({ data: mockUsers })
 

@@ -5,12 +5,12 @@ interface Props {
   users: User[]
 }
 
-const UserList: React.FC<Props> = ({ users = [] }): JSX.Element => (
+const UserList: React.FC<Props> = ({ users }) => (
   <div>
-    {users.map((user) => (
-      <div key={user.id}>
-        <h2>{user.username}</h2>
-        <p>{user.email}</p>
+    {users.map(({ id, username, email }) => (
+      <div key={id}>
+        <h2>{username}</h2>
+        <p>{email}</p>
       </div>
     ))}
   </div>

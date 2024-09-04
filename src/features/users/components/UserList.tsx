@@ -1,5 +1,6 @@
 import type { User } from "@domain/models/User"
 import React from "react"
+import UserCard from "./UserCard"
 
 interface Props {
   users: User[]
@@ -7,11 +8,8 @@ interface Props {
 
 const UserList: React.FC<Props> = ({ users }) => (
   <div>
-    {users.map(({ id, username, email }) => (
-      <div key={id}>
-        <h2>{username}</h2>
-        <p>{email}</p>
-      </div>
+    {users.map((user) => (
+      <UserCard user={user} />
     ))}
   </div>
 )

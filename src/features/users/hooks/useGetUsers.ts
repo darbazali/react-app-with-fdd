@@ -3,7 +3,13 @@ import { userService } from "../services/userService"
 import { GetUsers } from "@domain/entities/userEntity"
 
 const useGetUsers = () => {
-  const [data, setData] = useState<GetUsers>()
+  const [data, setData] = useState<GetUsers>({
+    limit: 0,
+    skip: 0,
+    total: 0,
+    users: [],
+  })
+
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<unknown>()
 

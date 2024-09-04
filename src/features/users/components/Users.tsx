@@ -1,5 +1,6 @@
 import { FC } from "react"
 import useGetUsers from "../hooks/useGetUsers"
+import UserList from "./UserList"
 
 const Users: FC = (): JSX.Element => {
   const { users, loading, error } = useGetUsers()
@@ -9,12 +10,7 @@ const Users: FC = (): JSX.Element => {
   return (
     <div>
       <h1>Users</h1>
-      {users.users.map((user) => (
-        <div key={user.id}>
-          <h2>{user.username}</h2>
-          <p>{user.email}</p>
-        </div>
-      ))}
+      <UserList users={users.users} />
     </div>
   )
 }

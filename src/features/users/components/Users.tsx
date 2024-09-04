@@ -9,7 +9,7 @@ const Users: FC = (): JSX.Element => {
   return (
     <div>
       <h1>Users</h1>
-      {users?.users?.map((user) => (
+      {users.users.map((user) => (
         <div key={user.id}>
           <h2>{user.username}</h2>
           <p>{user.email}</p>

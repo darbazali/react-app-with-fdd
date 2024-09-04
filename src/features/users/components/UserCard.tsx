@@ -10,7 +10,7 @@ const UserCard: React.FC<Props> = ({ user }) => {
 
   return (
     <div key={id}>
-      <h2>{firstName + " " + lastName}</h2>
+      <h2>{`${firstName} ${lastName}`}</h2>
       <h5>{username}</h5>
       <p>{email}</p>
     </div>

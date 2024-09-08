@@ -1,5 +1,9 @@
 import AuthUser from "@domain/models/AuthUser"
-import { LoginParams } from "features/auth/types"
+
+export interface LoginParams {
+  username: string
+  password: string
+}
 
 interface AuthUserEntity {
   login(user: LoginParams): Promise<AuthUser>

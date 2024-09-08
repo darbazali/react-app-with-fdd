@@ -1,8 +1,8 @@
 import { describe, expect, it, beforeEach, mock } from "bun:test"
 import apiAgent from "@adapters/apiAgent"
 import { authService } from "./authService"
-import { LoginParams } from "../types"
 import AuthUser from "@domain/models/AuthUser"
+import { LoginParams } from "@domain/entities/authEntity"
 
 const mockPost = mock()
 

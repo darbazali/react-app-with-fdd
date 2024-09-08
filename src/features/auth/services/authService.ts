@@ -1,6 +1,5 @@
 import apiAgent from "@adapters/apiAgent"
-import { LoginParams } from "../types"
-import AuthUserEntity from "@domain/entities/authEntity"
+import AuthUserEntity, { LoginParams } from "@domain/entities/authEntity"
 import AuthUser from "@domain/models/AuthUser"
 
 export class AuthService implements Exact<AuthService, AuthUserEntity> {

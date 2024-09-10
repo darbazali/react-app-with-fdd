@@ -3,8 +3,8 @@ import useGetUsers from "../hooks/useGetUsers"
 import UserList from "./UserList"
 
 const Users: FC = (): JSX.Element => {
-  const { users, loading, error } = useGetUsers()
-  if (loading) return <div>Loading...</div>
+  const { users, isLoading, error } = useGetUsers()
+  if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error</div>
 
   return (

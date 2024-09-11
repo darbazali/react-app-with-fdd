@@ -1,4 +1,5 @@
-import { describe, expect, it, beforeEach } from "bun:test"
+import { describe, expect, it, beforeEach } from "vitest"
+
 import { useCounterStore } from "./useCounterStore"
 
 describe("Counter Store", () => {

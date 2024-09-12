@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "happy-dom",
-    setupFiles: "./src/setupTests.ts",
+    setupFiles: "./src/app/setupTests.ts",
     exclude: [...configDefaults.exclude],
     coverage: {
       reporter: ["text", "html"],

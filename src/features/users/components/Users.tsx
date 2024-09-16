@@ -4,6 +4,7 @@ import UserList from "./UserList"
 
 const Users: FC = (): JSX.Element => {
   const { users, isLoading, error } = useGetUsers()
+
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error</div>
 

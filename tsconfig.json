@@ -37,7 +37,6 @@
     ".eslintrc.json",
     "vite.config.ts",
     "lint-staged.config.ts",
-    "jest.config.ts",
     "index.d.ts"
   ],
 

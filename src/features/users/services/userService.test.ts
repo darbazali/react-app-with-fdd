@@ -1,9 +1,10 @@
-import { describe, expect, it, beforeEach, mock } from "bun:test"
+import { describe, expect, it, beforeEach, vi } from "vitest"
+
 import apiAgent from "@adapters/apiAgent"
 import { userService } from "./userService"
 import { GetUsers } from "@domain/entities/userEntity"
 
-const mockGet = mock()
+const mockGet = vi.fn()
 
 beforeEach(() => {
   apiAgent.get = mockGet

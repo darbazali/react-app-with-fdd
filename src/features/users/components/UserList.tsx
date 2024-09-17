@@ -12,7 +12,7 @@ const UserList: React.FC<Props> = ({ users }) => {
   return (
     <div>
       {users.map((user) => (
-        <UserCard user={user} />
+        <UserCard user={user} key={user.id} />
       ))}
     </div>
   )

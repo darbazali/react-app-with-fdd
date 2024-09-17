@@ -6,10 +6,10 @@ interface Props {
 }
 
 const UserCard: React.FC<Props> = ({ user }) => {
-  const { id, username, email, firstName, lastName } = user
+  const { username, email, firstName, lastName } = user
 
   return (
-    <div key={id}>
+    <div>
       <h2>{`${firstName} ${lastName}`}</h2>
       <h5>{username}</h5>
       <p>{email}</p>
